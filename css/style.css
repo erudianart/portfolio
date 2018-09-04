@@ -73,7 +73,7 @@ table{
 /* GO! */
 
 .header {
-  background:url(../images/bai.jpg) no-repeat 50% 50%;
+  background:url(../images/bai-1600.jpg) no-repeat 50% 50%;
   background-size: 100% auto;
   height: 600px;
   max-width: 1600px;
@@ -82,12 +82,14 @@ table{
 
 @media screen and (max-width: 900px) {
   .header {
+    background-image:url(../images/bai-900.jpg);
     background-size: auto 100%;
   }
 }
 
 @media screen and (max-width: 550px) {
   .header {
+    background-image:url(../images/bai-900.jpg);
     background-position: 100% 50%;
   }
 }
@@ -157,10 +159,6 @@ table{
     width: 300px;
     height: auto;
   }
-}
-
-.section-gray {
-  background: radial-gradient(rgba(241, 241, 241, 0.41), rgba(224, 224, 224, 1));
 }
 
 .section-content {
@@ -244,15 +242,7 @@ table{
   position: absolute;
   left: 50%;
   bottom: 50px;
-  margin-left: -90px;
-  width: 180px;
-  padding: 1em 0;
-  font-family: Raleway, sans-serif;
-  background: #444;
-  color: #fff;
-  text-align:center;
-  text-decoration:none;
-  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 940px) {
@@ -262,7 +252,24 @@ table{
   }
 }
 
-.section-cta:hover {
+.section-cta > a {
+  display: inline-block;
+  width: 180px;
+  padding: 1em 0;
+  margin-left: 1em;
+  font-family: Raleway, sans-serif;
+  background: #444;
+  color: #fff;
+  text-align:center;
+  text-decoration:none;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-cta a:first-child {
+  margin-left: 0;
+}
+
+.section-cta a:hover {
   background: #222;
 }
 
@@ -302,4 +309,21 @@ table{
   .section-iframe-small {
     display: block;
   }
+}
+
+.section-heading {
+  background:#fff;
+}
+.group-heading {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.section-heading > .section-wrap {
+  height: auto;
+  margin: 20px auto;
 }
