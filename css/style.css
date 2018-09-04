@@ -248,6 +248,9 @@ table{
   .section-cta {
     position: static;
     margin: 0 60px 30px;
+    transform: none;
+    left: auto;
+    bottom: auto;
   }
 }
 
@@ -264,11 +267,19 @@ table{
   transition: all 0.3s ease-in-out;
 }
 
-.section-cta a:first-child {
+@media screen and (max-width: 940px) {
+  .section-cta > a {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.section-cta > a:first-child {
   margin-left: 0;
 }
 
-.section-cta a:hover {
+.section-cta > a:hover {
   background: #222;
 }
 
