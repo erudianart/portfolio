@@ -167,6 +167,10 @@ table{
   transform: translate3d(0, -50%, 0);
 }
 
+.section-content-full {
+  width: auto;
+}
+
 @media screen and (max-width: 940px) {
   .section-content{
     position: static;
@@ -234,6 +238,13 @@ table{
 .section-list > li {
   padding-bottom: 0.125em;
   line-height: 1.25em;
+}
+
+.section-copy > p {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
 }
 
 .section-cta {

@@ -144,5 +144,53 @@
       </div>
     </div>
   </section>
+  <section class='section-heading'>
+    <div class='section-wrap'>
+      <h3 class='group-heading'>Research</h3>
+    </div>
+  </section>
+  <section class='section'>
+    <div class='section-wrap'>
+      <h2 class='section-header'>DeformIt</h2>
+      <div class='section-image section-image-right'>
+        <img src='old/images/deformit.jpg' alt='' width='300'>
+      </div>
+      <div class='section-content section-copy'>
+        <p>DeformIt is an online tool that generates a large dataset of images and their ground-truth segmentations based on a single image and its ground-truth segmentation.  The images are deformed by generating a set of displacement vectors at control points across the image space.  There are two methods to generate the displacement vectors: random deformations (following a uniform random distribution) and vibrational and variational deformations.  The vibrational and variational deformations use a combined Finite Element Method <abbr title="Finite Element Method">(FEM)</abbr> and Point Distribution Model <abbr title="Point Distribution Model">(PDM)</abbr>. which treats the image as a flexible material where each control point is connected to every other control point with a spring of equal stiffness.  The vibrational portion of the deformation "pulls" on the image, resulting in a new deformed image.  The variational method is a statistical model that creates the displacement vectors based on a history of the previous displacement vectors. Images are also degraded with noise and non-uniformity.</p>
+      </div>
+      <div class='section-cta'>
+        <a href="/research/papers/deformit.pdf">Paper</a>
+        <a href="https://github.com/erudianart/DeformIt">GitHub</a>
+      </div>
+    </div>
+  </section>
+  <section class='section'>
+    <div class='section-wrap'>
+      <h2 class='section-header'>VascuSynth</h2>
+      <div class='section-image section-image-right'>
+        <img src='old/images/vascusynth.jpg' alt='' width='340'>
+      </div>
+      <div class='section-content section-copy'>
+        <p>VascuSynth is a tool that generates 3D images of vascular structures at the prearteriolar level (before the capillaries) iteratively using an oxygen demand map.  Starting at a an initial root position, we select a random location in the volume that has high oxygen demand.  We then create an initial branch going from the root position to the random point.  The radius of the branch is calculated using accurate physical models and the oxygen demand/supply map is updated to reflect decreasing the demand for oxygen in the areas proximal to the branch. We then select another point at random that has high oxygen demand and create a branch from the midpoint of the initial branch to the new point.  This creates a bifurcation point in the vascular structure. The radii of all of the branches are calculated, and the oxygen demand/supply map is updated once again.  This continues until we reach a maximum number of terminal nodes. VascuSynth outputs the vascular structure using GXL and a series of pngs</p>
+      </div>
+      <div class='section-cta'>
+        <a href="http://www.insight-journal.org/browse/publication/794">Insight Journal</a>
+        <a href="https://github.com/erudianart/VascuSynth">GitHub</a>
+      </div>
+    </div>
+  </section>
+  <section class='section'>
+    <div class='section-wrap'>
+      <h2 class='section-header'>Turbo Boost Evaluation</h2>
+      <div class='section-content section-content-full section-copy'>
+        <p>We performed an extensive analysis of the Turbo Boost technology and characterized its behavior in varying workload conditions. In particular, we analyzed how the activation of Turbo Boost was affected by inherent properties of applications (i.e., their rate of memory accesses) and by the overall load imposed on the processor. Furthermore, we analyzed the capability of Turbo Boost to mitigate Amdahl's law by accelerating sequential phases of parallel applications. Finally, we estimated the impact of the Turbo Boost technology on the overall energy consumption.</p>
+
+        <p>We found that Turbo Boost provided (on average) up to a 6% reduction in execution time but also resulted in an increase in energy consumption up to 16%. Our results also indicated that Turbo Boost set the processor to operate at maximum frequency (where it has the potential to provide the maximum gain in performance) when the mapping of threads to hardware contexts is sub-optimal.</p>
+      </div>
+      <div class='section-cta'>
+        <a href="/research/papers/turboboost.pdf">Paper</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
